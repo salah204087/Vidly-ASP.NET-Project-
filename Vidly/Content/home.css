@@ -1,0 +1,95 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+    .hero-section h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .hero-section p {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+
+.animated-text {
+    display: inline-block;
+    position: relative;
+    font-size: 48px;
+    line-height: 1;
+}
+
+    .animated-text span {
+        position: absolute;
+        opacity: 0;
+        color: #387373;
+        animation: animate-text 12s ease-in-out infinite;
+    }
+
+        .animated-text span:nth-child(2) {
+            animation-delay: 4s;
+        }
+
+        .animated-text span:nth-child(3) {
+            animation-delay: 8s;
+        }
+
+@keyframes animate-text {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    35% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+.animated-text span:first-child {
+    animation-delay: 0s;
+}
+
+.animated-text span:nth-child(2) {
+    top: 75%;
+    left: 0;
+    animation-delay: 4s;
+}
+
+.animated-text span:last-child {
+    top: 150%;
+    left: 0;
+    animation-delay: 8s;
+}
